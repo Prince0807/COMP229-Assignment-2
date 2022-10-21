@@ -5,39 +5,39 @@ let mongoose = require('mongoose');
 let jwt = require('jsonwebtoken');
 
 // create a reference to the model
-let Book = require('../models/book');
+let contact = require('../models/contact');
 
-module.exports.displayBookList = (req, res, next) => {
-    Book.find((err, bookList) => {
+module.exports.displaycontactList = (req, res, next) => {
+    contact.find((err, contactList) => {
         if(err)
         {
             return console.error(err);
         }
         else
         {
-            //console.log(BookList);
+            //console.log(contactList);
 
-            res.render('book/list', 
-            {title: 'Books', 
-            BookList: bookList, 
+            res.render('contact/list', 
+            {title: 'contacts', 
+            contactList: contactList, 
             displayName: req.user ? req.user.displayName : ''});
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('book/add', {title: 'Add Book', 
+    res.render('contact/add', {title: 'Add contact', 
     displayName: req.user ? req.user.displayName : ''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newBook = Book({
+    let newcontact = contact({
         "name": req.body.name,
         "email": req.body.email,
         "contact": req.body.contact,
     });
 
-    Book.create(newBook, (err, Book) =>{
+    contact.create(newcontact, (err, contact) =>{
         if(err)
         {
             console.log(err);
@@ -45,8 +45,8 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
-            res.redirect('/book-list');
+            // refresh the contact list
+            res.redirect('/contact-list');
         }
     });
 
@@ -55,7 +55,7 @@ module.exports.processAddPage = (req, res, next) => {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    Book.findById(id, (err, bookToEdit) => {
+    contact.findById(id, (err, contactToEdit) => {
         if(err)
         {
             console.log(err);
@@ -64,7 +64,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             //show the edit view
-            res.render('book/edit', {title: 'Edit Book', book: bookToEdit, 
+            res.render('contact/edit', {title: 'Edit contact', contact: contactToEdit, 
             displayName: req.user ? req.user.displayName : ''})
         }
     });
@@ -73,14 +73,14 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedBook = Book({
+    let updatedcontact = contact({
         "_id": id,
         "name": req.body.name,
         "email": req.body.email,
         "contact": req.body.contact
     });
 
-    Book.updateOne({_id: id}, updatedBook, (err) => {
+    contact.updateOne({_id: id}, updatedcontact, (err) => {
         if(err)
         {
             console.log(err);
@@ -88,8 +88,8 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
-            res.redirect('/book-list');
+            // refresh the contact list
+            res.redirect('/contact-list');
         }
     });
 }
@@ -97,7 +97,7 @@ module.exports.processEditPage = (req, res, next) => {
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
-    Book.remove({_id: id}, (err) => {
+    contact.remove({_id: id}, (err) => {
         if(err)
         {
             console.log(err);
@@ -105,8 +105,8 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-             // refresh the book list
-             res.redirect('/book-list');
+             // refresh the contact list
+             res.redirect('/contact-list');
         }
     });
 }
