@@ -20,7 +20,7 @@ module.exports.displayBookList = (req, res, next) => {
             res.render('book/list', 
             {title: 'Books', 
             BookList: bookList, 
-            displayName: req.user ? req.user.displayName : ''});      
+            displayName: req.user ? req.user.displayName : ''});
         }
     });
 }
@@ -33,10 +33,8 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
     let newBook = Book({
         "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "email": req.body.email,
+        "contact": req.body.contact,
     });
 
     Book.create(newBook, (err, Book) =>{
@@ -78,10 +76,8 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedBook = Book({
         "_id": id,
         "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "email": req.body.email,
+        "contact": req.body.contact
     });
 
     Book.updateOne({_id: id}, updatedBook, (err) => {
