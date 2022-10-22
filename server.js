@@ -1,4 +1,11 @@
-#!/usr/bin/env node
+/*
+Student Name: Prince Kiritkumar Patel
+Student ID: 301277354
+Date: 21 Oct 2022
+File Name: style.css // for css
+*/
+
+// /usr/bin/env node
 
 /**
  * Module dependencies.

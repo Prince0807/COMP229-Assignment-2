@@ -1,3 +1,10 @@
+/*
+Student Name: Prince Kiritkumar Patel
+Student ID: 301277354
+Date: 21 Oct 2022
+File Name: style.css // for css
+*/
+
 // IIFE -- Immediately Invoked Function Expression
 (function(){
 
