@@ -1,13 +1,16 @@
-<%- include ../partials/header.ejs %>
 
-<%- include ../partials/main_nav.ejs %>
 
-<!-- Content for the Add page -->
-<div class="container">
+<%- include ../partials/head.ejs %>
+
+<%- include ../partials/menu.ejs %>
+
+<main class="container">
+
     <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
-
+        <div style="margin-left:35%; margin-right:35%;">
+            <div class="section-title">
+                <h2>Add<span> Contact</span></h2>
+            </div>
             <form class="form" method="POST">
                 <div class="form-group">
                     <label for="nameTextField">Contact Name</label>
@@ -33,19 +36,16 @@
                     name="contact" required>
                 </div>
 
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
                 
-                    <a href="/contact-list" class="btn btn-warning">
-                        <i class="fas fa-undo"></i> Cancel</a>
+                    <a href="/contact-list" class="btn btn-warning">Cancel</a>
 
             </form>
         </div>
     </div>
-</div>
 
 
+</main>
 
-<%- include ../partials/bottom_nav.ejs %>  
 
-<%- include ../partials/footer.ejs %>
+<%- include ../partials/script.ejs %>

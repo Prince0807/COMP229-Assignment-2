@@ -1,19 +1,20 @@
-<%- include ../partials/header.ejs %>
+<%- include ../partials/head.ejs %>
 
-<%- include ../partials/main_nav.ejs %>
+<%- include ../partials/menu.ejs %>
 
-<!-- Content for the Add page -->
-<div class="container">
+<main class="container">
+
     <div class="row">
-        <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
-
+        <div style="margin-left:35%; margin-right:35%;">
+            <div class="section-title">
+                <h2>Edit<span> Contact</span></h2>
+            </div>
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField">contact Title</label>
+                    <label for="nameTextField">Contact Title</label>
                     <input type="text" class="form-control"
                     id="nameTextField"
-                    placeholder="Enter the contact Title"
+                    placeholder="Enter the contact title"
                     name="name" 
                     value="<%= contact.name %>"
                     required>
@@ -30,7 +31,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">Contact</label>
+                    <label for="publishedTextField">Contact Number</label>
                     <input type="text" class="form-control"
                     id="publishedTextField"
                     placeholder="Enter the Contact Number"
@@ -39,19 +40,16 @@
                     required>
                 </div>
 
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
                 
-                    <a href="/contact-list" class="btn btn-warning">
-                        <i class="fas fa-undo"></i> Cancel</a>
+                    <a href="/contact-list" class="btn btn-warning">Cancel</a>
 
             </form>
         </div>
-
     </div>
-</div>
 
 
-<%- include ../partials/bottom_nav.ejs %>  
+</main>
 
-<%- include ../partials/footer.ejs %>
+
+<%- include ../partials/script.ejs %>

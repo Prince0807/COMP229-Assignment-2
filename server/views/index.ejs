@@ -1,21 +1,63 @@
-<%- include partials/header.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+    
+    <!--Preloader starts-->
+    <div class="loader_bg"><div class="loader"></div></div>
+    <!--Preloader ends-->
 
-<%- include partials/main_nav.ejs %>
+  <% include partials/menu %>
+  <!--main content -->
+    <!--Banner area starts-->
+
+<div class="banner-area" id="about" class="paddsection">
+  <div id="particles-js"></div>
+  <div class="banner-table">
+      <div class="banner-table-cell">
+          <div class="welcome-text">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12 col-xs-12">
+                          <section class="intro animate-scale">
+                              
+                              <div class="img-area">
+                                  <img src="images/home/1.jpg" alt=""> <!--edit image-->
+                              </div>
+
+                              <h3>I'm Prince</h3>
+
+                              <h1 class="ah-headline">
+
+                                  <span class="ah-words-wrapper">
+                                      <b class="is-visible">Game Developer</b><!--edit the designation if you are in different profession-->
+                                      <b>Unity3D Programmer</b> <!--edit the designation if you are in different profession-->
+                                      <b>Gameplay Programmer</b> <!--edit the designation if you are in different profession-->
+                                  </span>
+                              </h1>
+
+                              <div class="social-icon">
+                                  <ul>
+                                      <li><a href="https://www.facebook.com/prince8700/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/_prince_0807" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                      <li><a href="https://www.linkedin.com/in/prince-0807/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                  </ul>
+                              </div>
+                          </section>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--Banner area ends-->
+
+<% include partials/script %>
+
   
-
-  <!-- Main Content -->
-  <main class="container">
-    <div class="jumbotron">
-      <h1 class="display-4">Welcome to the <%= title %> page</h1>
-      
-    </div>
-  </main>
-  
-<%- include partials/bottom_nav.ejs %>  
-
-<%- include partials/footer.ejs %>
-  
-
-
-
-
+</body>
+</html>

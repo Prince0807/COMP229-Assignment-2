@@ -1,6 +1,6 @@
-<%- include ../partials/header.ejs %>
+<%- include ../partials/head.ejs %>
 
-<%- include ../partials/main_nav.ejs %>
+<%- include ../partials/menu.ejs %>
 
 <main class="container">
     <!-- Message Area -->
@@ -11,32 +11,30 @@
     <% } %>
 
     <div class="row">
-        <div class="offset-md-4 col-md-4">
-            <h1>Please Register</h1>
+        <div style="margin-left:35%; margin-right:35%;">
+            <div class="section-title">
+                <h2>Sign<span>up</span></h2>
+            </div>
             <form method="POST" autocomplete="off">
                 <fieldset class="form-group">
-                    <label for="username">Username: </label>
                     <input type="text" class="form-control"
                     name="username" placeholder="Enter username"
                     id="username" required autofocus>
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label for="password">Password: </label>
                     <input type="password" class="form-control"
                     name="password" placeholder="Enter password"
                     id="password" required>
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label for="email">Email: </label>
                     <input type="email" class="form-control"
                     name="email" placeholder="Enter Email Address"
                     id="email" required>
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label for="displayName">Display Name: </label>
                     <input type="text" class="form-control"
                     name="displayName" placeholder="Enter Display Name"
                     id="displayName" required>
@@ -57,9 +55,4 @@
 </main>
 
 
-
-
-
-<%- include ../partials/bottom_nav.ejs %>  
-
-<%- include ../partials/footer.ejs %>
+<%- include ../partials/script.ejs %>

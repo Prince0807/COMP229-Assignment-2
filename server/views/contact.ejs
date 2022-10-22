@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<!--Contact Area Starts-->
+
+<div id="contact" class="contact-area section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="section-title">
+              <h2>My <span>Contact</span></h2>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 box-contact-form">
+
+              <form id="contact-form" action="https://formsubmit.co/contact@princepatel.live" method="POST">
+
+                  <div class="messages"></div>
+
+                  <div class="controls">
+
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter your full name *" required="required" data-error="Fullname is required.">
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required" data-error="Valid email is required.">
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <textarea id="form_message" name="message" class="form-control" placeholder="Your Message *" rows="4" required="required" data-error="Leave a message for me"></textarea>
+                                  <div class="help-block with-errors"></div>
+                              </div>
+                          </div>
+                          <div class="col-md-12">
+                              <button class="btn btn-send" type="submit">Send message</button>
+                          </div>
+                      </div>
+                  </div>
+
+              </form>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1">
+              <div class="right-contact">
+                  <div class="right-contact-text">
+                      <i class="fa fa-map-marker"></i>
+                      <h2>Address</h2>
+                      <p>Scarborough, ON</p>
+                  </div>
+                  <div class="right-contact-text">
+                      <i class="fa fa-phone"></i>
+                      <h2>Contact Number</h2>
+                      <p>+1 647 802 7812</p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+<!--Contact Area Ends-->
+
+</body>
+<% include partials/script %>
+<% include partials/footer %>
+</html>
